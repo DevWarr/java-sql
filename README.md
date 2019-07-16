@@ -312,7 +312,13 @@ CustomerID  CustomerName             ContactName        Address                 
 
 <details>
 <summary><strong>add a customer record for <em>"The Shire"</em>, the contact name is <em>"Bilbo Baggins"</em> the address is <em>"1 Hobbit-Hole"</em> in <em>"Bag End"</em>, postal code <em>"111"</em> and the country is <em>"Middle Earth"</em>.</strong></summary>
-> This can be done with the INSERT INTO clause
+
+```
+INSERT INTO Customers(CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ("The Shire", "Bilbo Baggins", "1 Hobbit-Hole", "Bag End", "111", "Middle Earth");
+
+You have made changes to the database. Rows affected: 1
+```
 </details>
  
 <details>
