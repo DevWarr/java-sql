@@ -18,7 +18,7 @@ Surf to [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.as
 Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below. You will be submitting that through the regular fork, change, pull process.
 
 <details>
-<summary><strong>find all customers that live in London. Returns 6 records.</strong></summary>
+<summary><strong>Find all customers that live in London. Returns 6 records.</strong></summary>
 
 ```
 SELECT *
@@ -36,7 +36,7 @@ CustomerID    CustomerName            ContactName         Address               
 </details>
 
 <details>
-<summary><strong>find all customers with postal code 1010. Returns 3 customers.</strong></summary>
+<summary><strong>Find all customers with postal code 1010. Returns 3 customers.</strong></summary>
 
 ```
 SELECT *
@@ -51,7 +51,7 @@ CustomerID   CustomerName                 ContactName        Address            
 </details>
 
 <details>
-<summary><strong>find the phone number for the supplier with the id 11. Should be (010) 9984510.</strong></summary>
+<summary><strong>Find the phone number for the supplier with the id 11. Should be (010) 9984510.</strong></summary>
 
 ```
 SELECT Phone
@@ -64,7 +64,7 @@ Phone
 </details>
 
 <details>
-<summary><strong>list orders descending by the order date. The order with date 1997-02-12 should be at the top.</strong></summary>
+<summary><strong>List orders descending by the order date. The order with date 1997-02-12 should be at the top.</strong></summary>
 
 ```
 SELECT *
@@ -272,7 +272,7 @@ OrderID  CustomerID  EmployeeID  OrderDate   ShipperID
 </details>
 
 <details>
-<summary><strong>find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.</strong></summary>
+<summary><strong>Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.</strong></summary>
 
 ```
 SELECT * 
@@ -295,7 +295,7 @@ SupplierID  SupplierName                            ContactName                 
 </details>
 
 <details>
-<summary><strong>find all customers that include the word "market" in the name. Should return 4 records.</strong></summary>
+<summary><strong>Find all customers that include the word "market" in the name. Should return 4 records.</strong></summary>
 
 ```
 SELECT * 
@@ -311,7 +311,7 @@ CustomerID  CustomerName             ContactName        Address                 
 </details>
 
 <details>
-<summary><strong>add a customer record for <em>"The Shire"</em>, the contact name is <em>"Bilbo Baggins"</em> the address is <em>"1 Hobbit-Hole"</em> in <em>"Bag End"</em>, postal code <em>"111"</em> and the country is <em>"Middle Earth"</em>.</strong></summary>
+<summary><strong>Add a customer record for <em>"The Shire"</em>, the contact name is <em>"Bilbo Baggins"</em> the address is <em>"1 Hobbit-Hole"</em> in <em>"Bag End"</em>, postal code <em>"111"</em> and the country is <em>"Middle Earth"</em>.</strong></summary>
 
 ```
 INSERT INTO Customers(CustomerName, ContactName, Address, City, PostalCode, Country)
@@ -322,7 +322,7 @@ You have made changes to the database. Rows affected: 1
 </details>
  
 <details>
-<summary><strong>update <em>Bilbo Baggins</em> record so that the postal code changes to <em>"11122"</em>.</strong></summary>
+<summary><strong>Update <em>Bilbo Baggins</em> record so that the postal code changes to <em>"11122"</em>.</strong></summary>
 
 ```
 UPDATE Customers
@@ -334,7 +334,7 @@ You have made changes to the database. Rows affected: 1
 </details>
  
 <details> 
-<summary><strong>list orders grouped by customer showing the number of orders per customer. <em>Rattlesnake Canyon Grocery</em> should have 7 orders.</strong></summary>
+<summary><strong>List orders grouped by customer showing the number of orders per customer. <em>Rattlesnake Canyon Grocery</em> should have 7 orders.</strong></summary>
 
 ```
 SELECT COUNT(o.CustomerID), c.CustomerName, c.ContactName
@@ -421,7 +421,7 @@ COUNT(o.CustomerID)  CustomerName                        ContactName
 </details>
  
 <details>
-<summary><strong>list customers names and the number of orders per customer. Sort the list by number of orders in descending order. <em>Ernst Handel</em> should be at the top with 10 orders followed by <em>QUICK-Stop</em>, <em>Rattlesnake Canyon Grocery</em> and <em>Wartian Herkku</em> with 7 orders each.</strong></summary>
+<summary><strong>List customers names and the number of orders per customer. Sort the list by number of orders in descending order. <em>Ernst Handel</em> should be at the top with 10 orders followed by <em>QUICK-Stop</em>, <em>Rattlesnake Canyon Grocery</em> and <em>Wartian Herkku</em> with 7 orders each.</strong></summary>
 
 ```
 SELECT COUNT(o.CustomerID), c.CustomerName, c.ContactName
@@ -508,7 +508,7 @@ orderCount  CustomerName                        ContactName
 </details>
  
 <details>
-<summary><strong>list orders grouped by customer's city showing number of orders per city. Returns 58 Records with <em>Aachen</em> showing 2 orders and <em>Albuquerque</em> showing 7 orders.</strong></summary>
+<summary><strong>List orders grouped by customer's city showing number of orders per city. Returns 58 Records with <em>Aachen</em> showing 2 orders and <em>Albuquerque</em> showing 7 orders.</strong></summary>
 
 ```
 SELECT COUNT(o.CustomerID), c.City, c.CustomerName, c.ContactName
@@ -614,7 +614,7 @@ Take the following data and normalize it into a 3NF database.
 ## Stretch Goals
 
 <details>
-<summary><strong>delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.</strong></summary>
+<summary><strong>Delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.</strong></summary>
 
 ```
 DELETE
