@@ -17,8 +17,8 @@ Surf to [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.as
 
 Answer the following data queries. Keep track of the SQL you write by pasting it into this document under its appropriate header below. You will be submitting that through the regular fork, change, pull process.
 
-
-### find all customers that live in London. Returns 6 records.
+<details>
+<summary><strong>find all customers that live in London. Returns 6 records.</strong></summary>
 
 ```
 SELECT *
@@ -33,8 +33,10 @@ CustomerID    CustomerName            ContactName         Address               
 53            North/South             Simon Crowther      South House 300 Queensbridge   London   SW7 1RZ      UK
 72            Seven Seas Imports      Hari Kumar          90 Wadhurst Rd.                London   OX15 4NB     UK
 ```
+</details>
 
-### find all customers with postal code 1010. Returns 3 customers.
+<details>
+<summary><strong>find all customers with postal code 1010. Returns 3 customers.</strong></summary>
 
 ```
 SELECT *
@@ -46,8 +48,10 @@ CustomerID   CustomerName                 ContactName        Address            
 54           Océano Atlántico Ltda.       Yvonne Moncada     Ing. Gustavo Moncada 8585 Piso 20-A   Buenos Aires   1010         Argentina
 64           Rancho grande                Sergio Gutiérrez   Av. del Libertador 900                Buenos Aires   1010         Argentina
 ```
+</details>
 
-### find the phone number for the supplier with the id 11. Should be (010) 9984510.
+<details>
+<summary><strong>find the phone number for the supplier with the id 11. Should be (010) 9984510.</strong></summary>
 
 ```
 SELECT Phone
@@ -57,37 +61,54 @@ WHERE SupplierID = "11";
 Phone
 (010) 9984510
 ```
+</details>
 
-### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
+<details>
+<summary><strong>list orders descending by the order date. The order with date 1997-02-12 should be at the top.</strong></summary>
 > This can be done with SELECT, WHERE, and ORDER BY clauses
+</details>
 
-### find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.
+<details>
+<summary><strong>find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name. Returns 11 records.</strong></summary>
 > This can be done with SELECT and WHERE clauses
+</details>
 
-### find all customers that include the word "market" in the name. Should return 4 records.
+<details>
+<summary><strong>find all customers that include the word "market" in the name. Should return 4 records.</strong></summary>
 > This can be done with SELECT and a WHERE clause using the LIKE keyword
 
 > Don't forget the wildcard '%' symbols at the beginning and end of your substring to denote it can appear anywhere in the string in question
+</details>
 
-### add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
+<details>
+<summary><strong>add a customer record for <em>"The Shire"</em>, the contact name is <em>"Bilbo Baggins"</em> the address is <em>"1 Hobbit-Hole"</em> in <em>"Bag End"</em>, postal code <em>"111"</em> and the country is <em>"Middle Earth"</em>.</strong></summary>
 > This can be done with the INSERT INTO clause
-
-### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
+</details>
+ 
+<details>
+<summary><strong>update <em>Bilbo Baggins</em> record so that the postal code changes to <em>"11122"</em>.</strong></summary>
 > This can be done with UPDATE and WHERE clauses
-
-### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
+</details>
+ 
+<details> 
+<summary><strong>list orders grouped by customer showing the number of orders per customer. <em>Rattlesnake Canyon Grocery</em> should have 7 orders.</strong></summary>
 > This can be done with SELECT, COUNT, JOIN and GROUP BY clauses. Your count should focus on a field in the Orders table, not the Customer table
 
 > There is more information about the COUNT clause on [W3 Schools](https://www.w3schools.com/sql/sql_count_avg_sum.asp)
-
-### list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
+</details>
+ 
+<details>
+<summary><strong>list customers names and the number of orders per customer. Sort the list by number of orders in descending order. <em>Ernst Handel</em> should be at the top with 10 orders followed by <em>QUICK-Stop</em>, <em>Rattlesnake Canyon Grocery</em> and <em>Wartian Herkku</em> with 7 orders each.</strong></summary>
 > This can be done by adding an ORDER BY clause to the previous answer
-
-### list orders grouped by customer's city showing number of orders per city. Returns 58 Records with _Aachen_ showing 2 orders and _Albuquerque_ showing 7 orders.
+</details>
+ 
+<details>
+<summary><strong>list orders grouped by customer's city showing number of orders per city. Returns 58 Records with <em>Aachen</em> showing 2 orders and <em>Albuquerque</em> showing 7 orders.</strong></summary>
 > This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
+</details>
 
-
-## Data Normalization
+<details>
+<summary><strong>Data Normalization</strong></summary>
 
 Note: This step does not use PostgreSQL!
 
@@ -98,18 +119,22 @@ Take the following data and normalize it into a 3NF database.
 | Jane        | Ellie    | Dog      | Tiger      | Cat        | Toby       | Turtle     | No          | Yes          |
 | Bob         | Joe      | Horse    |            |            |            |            | No          | No           |
 | Sam         | Ginger   | Dog      | Miss Kitty | Cat        | Bubble     | Fish       | Yes         | No           |
+</details>
 
 ---
 ## Stretch Goals
 
-### delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
+<details>
+<summary><strong>delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.</strong></summary>
 > This is done with a DELETE query
 
 > In the WHERE clause, you can provide another list with an IN keyword this list can be the result of another SELECT query. Write a query to return a list of CustomerIDs that meet the criteria above. Pass that to the IN keyword of the WHERE clause as the list of IDs to be deleted
  
 > Use a LEFT JOIN to join the Orders table onto the Customers table and check for a NULL value in the OrderID column
-
-## Create Database and Table
+</details>
+ 
+<details>
+<summary><strong>Create Database and Table</strong></summary>
 
 ### Keep track of the code you write and paste at the end of this document
 
@@ -124,3 +149,4 @@ Take the following data and normalize it into a 3NF database.
   - the `id` should be the primary key for the table.
   - account `name` should be unique.
   - account `budget` is required.
+</details>
