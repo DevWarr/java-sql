@@ -323,7 +323,14 @@ You have made changes to the database. Rows affected: 1
  
 <details>
 <summary><strong>update <em>Bilbo Baggins</em> record so that the postal code changes to <em>"11122"</em>.</strong></summary>
-> This can be done with UPDATE and WHERE clauses
+
+```
+UPDATE Customers
+SET PostalCode = "11122"
+WHERE ContactName = "Bilbo Baggins";
+
+You have made changes to the database. Rows affected: 1
+```
 </details>
  
 <details> 
