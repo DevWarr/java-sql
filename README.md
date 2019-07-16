@@ -509,7 +509,73 @@ orderCount  CustomerName                        ContactName
  
 <details>
 <summary><strong>list orders grouped by customer's city showing number of orders per city. Returns 58 Records with <em>Aachen</em> showing 2 orders and <em>Albuquerque</em> showing 7 orders.</strong></summary>
-> This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
+
+```
+SELECT COUNT(o.CustomerID), c.City, c.CustomerName, c.ContactName
+FROM Orders o JOIN Customers c 
+WHERE o.CustomerID = c.CustomerID
+GROUP BY c.City;
+
+COUNT(o.CustomerID)  City               CustomerName                    ContactName
+2                    Aachen             Drachenblut Delikatessend       Sven Ottlieb
+7                    Albuquerque        Rattlesnake Canyon Grocery      Paula Wilson
+4                    Anchorage          Old World Delicatessen          Rene Phillips
+2                    Barcelona          Galería del gastrónomo          Eduardo Saavedra
+5                    Barquisimeto       LILA-Supermercado               Carlos González
+3                    Bergamo            Magazzini Alimentari Riuniti    Giovanni Rovelli
+2                    Bern               Chop-suey Chinese               Yang Wang
+4                    Boise              Save-a-lot Markets              Jose Pavarotti
+2                    Brandenburg        Königlich Essen                 Philip Cramer
+4                    Bräcke             Folk och fä HB                  Maria Larsson
+1                    Buenos Aires       Océano Atlántico Ltda.          Yvonne Moncada
+1                    Campinas           Gourmet Lanchonetes             André Fonseca
+1                    Caracas            GROSELLA-Restaurante            Manuel Pereira
+2                    Charleroi          Suprêmes délices                Pascale Cartrain
+6                    Cork               Hungry Owl All-Night Grocers    Patricia McKenna
+3                    Cowes              Island Trading                  Helen Bennett
+7                    Cunewalde          QUICK-Stop                      Horst Kloss
+3                    Elgin              Hungry Coyote Import Store      Yoshi Latimer
+3                    Frankfurt a.M.     Lehmanns Marktstand             Renate Messner
+2                    Genève             Richter Supermarkt              Michael Holz
+10                   Graz               Ernst Handel                    Roland Mendel
+1                    Helsinki           Wilman Kala                     Matti Karttunen
+1                    I. de Margarita    LINO-Delicateses                Felipe Izquierdo
+1                    Köln               Ottilies Käseladen              Henriette Pfalzheim
+2                    København          Simons bistro                   Jytte Petersen
+6                    Lander             Split Rail Beer & Ale           Art Braunschweiger
+1                    Leipzig            Morgenstern Gesundkost          Alexander Feuer
+1                    Lille              Folies gourmandes               Martine Rancé
+5                    Lisboa             Furia Bacalhau e Frutos do Mar  Lino Rodriguez
+9                    London             B's Beverages                   Victoria Ashworth
+3                    Luleå              Berglunds snabbköp              Christina Berglund
+2                    Lyon               Victuailles en stock            Mary Saveley
+4                    Madrid             Romero y tomillo                Alejandra Camino
+3                    Marseille          Bon app'                        Laurence Lebihans
+5                    Montréal           Mère Paillarde                  Jean Fresnière
+9                    México D.F.        Centro comercial Moctezuma      Francisco Chang
+4                    München            Frankenversand                  Peter Franken
+1                    Münster            Toms Spezialitäten              Karin Josephs
+1                    Nantes             Du monde entier                 Janine Labrune
+7                    Oulu               Wartian Herkku                  Pirkko Koskitalo
+3                    Portland           Lonesome Pine Restaurant        Fran Wilson
+3                    Reggio Emilia      Reggiani Caseifici              Maurizio Moroni
+2                    Reims              Vins et alcools Chevalier       Paul Henriot
+2                    Resende            Wellington Importadora          Paula Parente
+8                    Rio de Janeiro     Hanari Carnes                   Mario Pontes
+3                    Salzburg           Piccolo und mehr                Georg Pipps
+2                    San Cristóbal      HILARIÓN-Abastos                Carlos Hernández
+2                    Seattle            White Clover Markets            Karl Jablonski
+1                    Sevilla            Godos Cocina Típica             José Pedro Freyre
+1                    Stavern            Santé Gourmet                   Jonas Bergulfsen
+4                    Strasbourg         Blondel père et fils            Frédérique Citeaux
+4                    Stuttgart          Die Wandernde Kuh               Rita Müller
+8                    São Paulo          Tradição Hipermercados          Anabela Domingues
+1                    Torino             Franchi S.p.A.                  Paolo Accorti
+5                    Toulouse           La maison d'Asie                Annette Roulet
+4                    Tsawassen          Bottom-Dollar Marketse          Elizabeth Lincoln
+1                    Walla              Wolski                          Zbyszek
+2                    Århus              Vaffeljernet                    Palle Ibsen
+```
 </details>
 
 <details>
