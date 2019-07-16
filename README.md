@@ -427,31 +427,39 @@ COUNT(o.CustomerID)  CustomerName                        ContactName
 SELECT COUNT(o.CustomerID), c.CustomerName, c.ContactName
 FROM Orders o JOIN Customers c 
 WHERE o.CustomerID = c.CustomerID
-GROUP BY c.CustomerName;
+GROUP BY c.CustomerName desc;
 
 orderCount  CustomerName                        ContactName
-1           Ana Trujillo Emparedados y helados  Ana Trujillo
-1           Antonio Moreno Taquería             Antonio Moreno
-1           B's Beverages                       Victoria Ashworth
-1           Bólido Comidas preparadas           Martín Sommer
-1           Centro comercial Moctezuma          Francisco Chang
-1           Comércio Mineiro                    Pedro Afonso
-1           Consolidated Holdings               Elizabeth Brown
-1           Du monde entier                     Janine Labrune
-1           Folies gourmandes                   Martine Rancé
-1           Franchi S.p.A.                      Paolo Accorti
-1           GROSELLA-Restaurante                Manuel Pereira
-1           Godos Cocina Típica                 José Pedro Freyre
-1           Gourmet Lanchonetes                 André Fonseca
-1           LINO-Delicateses                    Felipe Izquierdo
-1           Morgenstern Gesundkost              Alexander Feuer
-1           Océano Atlántico Ltda.              Yvonne Moncada
-1           Ottilies Käseladen                  Henriette Pfalzheim
-1           Santé Gourmet                       Jonas Bergulfsen
-1           The Big Cheese                      Liz Nixon
-1           Toms Spezialitäten                  Karin Josephs
-1           Wilman Kala                         Matti Karttunen
-1           Wolski                              Zbyszek
+10          Ernst Handel                        Roland Mendel
+7           QUICK-Stop                          Horst Kloss
+7           Rattlesnake Canyon Grocery          Paula Wilson
+7           Wartian Herkku                      Pirkko Koskitalo
+6           Hungry Owl All-Night Grocers        Patricia McKenna
+6           Split Rail Beer & Ale               Art Braunschweiger
+5           LILA-Supermercado                   Carlos González
+5           La maison d'Asie                    Annette Roulet
+5           Mère Paillarde                      Jean Fresnière
+4           Blondel père et fils                Frédérique Citeaux
+4           Bottom-Dollar Marketse              Elizabeth Lincoln
+4           Die Wandernde Kuh                   Rita Müller
+4           Folk och fä HB                      Maria Larsson
+4           Frankenversand                      Peter Franken
+4           Old World Delicatessen              Rene Phillips
+4           Que Delícia                         Bernardo Batista
+4           Save-a-lot Markets                  Jose Pavarotti
+4           Tortuga Restaurante                 Miguel Angel Paolino
+3           Berglunds snabbköp                  Christina Berglund
+3           Bon app'                            Laurence Lebihans
+3           Familia Arquibaldo                  Aria Cruz
+3           Hungry Coyote Import Store          Yoshi Latimer
+3           Island Trading                      Helen Bennett
+3           Lehmanns Marktstand                 Renate Messner
+3           Magazzini Alimentari Riuniti        Giovanni Rovelli
+3           Piccolo und mehr                    Georg Pipps
+3           Princesa Isabel Vinhoss             Isabel de Castro
+3           Reggiani Caseifici                  Maurizio Moroni
+3           Romero y tomillo                    Alejandra Camino
+3           Seven Seas Imports                  Hari Kumar
 2           Around the Horn                     Thomas Hardy
 2           Chop-suey Chinese                   Yang Wang
 2           Drachenblut Delikatessend           Sven Ottlieb
@@ -474,36 +482,28 @@ orderCount  CustomerName                        ContactName
 2           Vins et alcools Chevalier           Paul Henriot
 2           Wellington Importadora              Paula Parente
 2           White Clover Markets                Karl Jablonski
-3           Berglunds snabbköp                  Christina Berglund
-3           Bon app'                            Laurence Lebihans
-3           Familia Arquibaldo                  Aria Cruz
-3           Hungry Coyote Import Store          Yoshi Latimer
-3           Island Trading                      Helen Bennett
-3           Lehmanns Marktstand                 Renate Messner
-3           Magazzini Alimentari Riuniti        Giovanni Rovelli
-3           Piccolo und mehr                    Georg Pipps
-3           Princesa Isabel Vinhoss             Isabel de Castro
-3           Reggiani Caseifici                  Maurizio Moroni
-3           Romero y tomillo                    Alejandra Camino
-3           Seven Seas Imports                  Hari Kumar
-4           Blondel père et fils                Frédérique Citeaux
-4           Bottom-Dollar Marketse              Elizabeth Lincoln
-4           Die Wandernde Kuh                   Rita Müller
-4           Folk och fä HB                      Maria Larsson
-4           Frankenversand                      Peter Franken
-4           Old World Delicatessen              Rene Phillips
-4           Que Delícia                         Bernardo Batista
-4           Save-a-lot Markets                  Jose Pavarotti
-4           Tortuga Restaurante                 Miguel Angel Paolino
-5           LILA-Supermercado                   Carlos González
-5           La maison d'Asie                    Annette Roulet
-5           Mère Paillarde                      Jean Fresnière
-6           Hungry Owl All-Night Grocers        Patricia McKenna
-6           Split Rail Beer & Ale               Art Braunschweiger
-7           QUICK-Stop                          Horst Kloss
-7           Rattlesnake Canyon Grocery          Paula Wilson
-7           Wartian Herkku                      Pirkko Koskitalo
-10          Ernst Handel                        Roland Mendel
+1           Ana Trujillo Emparedados y helados  Ana Trujillo
+1           Antonio Moreno Taquería             Antonio Moreno
+1           B's Beverages                       Victoria Ashworth
+1           Bólido Comidas preparadas           Martín Sommer
+1           Centro comercial Moctezuma          Francisco Chang
+1           Comércio Mineiro                    Pedro Afonso
+1           Consolidated Holdings               Elizabeth Brown
+1           Du monde entier                     Janine Labrune
+1           Folies gourmandes                   Martine Rancé
+1           Franchi S.p.A.                      Paolo Accorti
+1           GROSELLA-Restaurante                Manuel Pereira
+1           Godos Cocina Típica                 José Pedro Freyre
+1           Gourmet Lanchonetes                 André Fonseca
+1           LINO-Delicateses                    Felipe Izquierdo
+1           Morgenstern Gesundkost              Alexander Feuer
+1           Océano Atlántico Ltda.              Yvonne Moncada
+1           Ottilies Käseladen                  Henriette Pfalzheim
+1           Santé Gourmet                       Jonas Bergulfsen
+1           The Big Cheese                      Liz Nixon
+1           Toms Spezialitäten                  Karin Josephs
+1           Wilman Kala                         Matti Karttunen
+1           Wolski                              Zbyszek
 ```
 </details>
  
