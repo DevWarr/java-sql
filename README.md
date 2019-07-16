@@ -615,11 +615,16 @@ Take the following data and normalize it into a 3NF database.
 
 <details>
 <summary><strong>delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.</strong></summary>
-> This is done with a DELETE query
 
-> In the WHERE clause, you can provide another list with an IN keyword this list can be the result of another SELECT query. Write a query to return a list of CustomerIDs that meet the criteria above. Pass that to the IN keyword of the WHERE clause as the list of IDs to be deleted
- 
-> Use a LEFT JOIN to join the Orders table onto the Customers table and check for a NULL value in the OrderID column
+```
+DELETE
+FROM Customers
+WHERE CustomerID NOT IN
+	(SELECT CustomerID
+    FROM Orders);
+
+No Result. ("Customers" table went from 92 to 74 rows)
+```
 </details>
  
 <details>
