@@ -590,6 +590,24 @@ Take the following data and normalize it into a 3NF database.
 | Jane        | Ellie    | Dog      | Tiger      | Cat        | Toby       | Turtle     | No          | Yes          |
 | Bob         | Joe      | Horse    |            |            |            |            | No          | No           |
 | Sam         | Ginger   | Dog      | Miss Kitty | Cat        | Bubble     | Fish       | Yes         | No           |
+
+3NF Data Tables:
+
+| PersonID | Person Name | Fenced Yard | City Dweller |
+|----------|-------------|-------------|--------------|
+| 1        | Jane        | No          | Yes          |
+| 2        | Bob         | No          | No           |
+| 3        | Sam         | Yes         | No           |
+
+| PetID | PersonID | Pet Name   | Pet Type |
+|-------|----------|------------|----------|
+| 1     | 1        | Ellie      | Dog      |
+| 2     | 2        | Joe        | Horse    |
+| 3     | 3        | Ginger     | Dog      |
+| 4     | 1        | Tiger      | Cat      |  
+| 5     | 3        | Miss Kitty | Cat      |
+| 6     | 1        | Toby       | Turtle   |
+| 7     | 3        | Bubble     | Fish     |
 </details>
 
 ---
